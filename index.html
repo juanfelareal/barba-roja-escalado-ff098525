@@ -339,6 +339,28 @@ strong{font-weight:600;color:var(--ink);}
   .sr-grid{grid-template-columns:1fr 1fr;}
 }
 @media print{.step-r,.pr{break-inside:avoid;}}
+/* Simulador de ROAS */
+.sim{margin-top:22px;background:var(--dark);color:var(--on-dark);border-radius:var(--r-xl);padding:30px 28px;}
+.sim .label{color:var(--on-dark-muted);}
+.sim h3{font-size:clamp(24px,4vw,32px);font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-top:10px;}
+.sim h3 b{font-weight:600;}
+.sim-ctrl{display:flex;align-items:center;gap:14px;margin-top:26px;flex-wrap:wrap;}
+.sim-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(243,241,237,.25);background:transparent;color:var(--on-dark);font:500 22px/1 var(--sans);cursor:pointer;flex:none;}
+.sim-btn:hover{border-color:var(--accent);color:var(--accent);}
+.sim-roas{min-width:120px;text-align:center;}
+.sim-roas b{display:block;font-size:44px;font-weight:300;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums;}
+.sim-roas span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted);}
+.sim-range{flex:1;min-width:200px;accent-color:#44BF47;}
+.sim-out{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(243,241,237,.15);font-size:22px;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+.sim-out span{display:block;font-size:11.5px;font-weight:400;letter-spacing:0;color:var(--on-dark-muted);line-height:1.3;margin-bottom:4px;}
+.sim-out em{display:block;font-style:normal;font-size:12px;font-weight:400;letter-spacing:0;color:#C9C6C0;margin-top:2px;}
+.sim-out .big{color:#44BF47;}
+.sim-msg{margin-top:20px;padding:12px 16px;border-radius:var(--r-md);background:var(--dark-2);font-size:14.5px;color:#C9C6C0;display:flex;gap:10px;align-items:flex-start;}
+.sim-msg i{width:9px;height:9px;border-radius:50%;margin-top:6px;flex:none;background:#44BF47;}
+.sim-msg.warn i{background:#E8B341;}
+.sim-msg.bad i{background:#E5533D;}
+@media (max-width:720px){.sim{padding:26px 20px;}.sim-out{grid-template-columns:1fr 1fr;}.sim-range{order:3;flex-basis:100%;}}
+@media print{.sim{break-inside:avoid;}.sim-btn,.sim-range{display:none;}}
 </style>
 </head>
 <body>
@@ -492,6 +514,24 @@ strong{font-weight:600;color:var(--ink);}
         </div>
       </div>
     </div>
+
+    <div class="sim" id="sim">
+      <p class="label"><span class="dot"></span>Escenario · inversión de $182 millones al mes</p>
+      <h3>¿Y si con <b>$182 millones</b> el ROAS se sostiene en <b class="js-roas-t">2,6</b>?</h3>
+      <div class="sim-ctrl">
+        <button class="sim-btn" type="button" data-d="-0.1" aria-label="Bajar ROAS">−</button>
+        <div class="sim-roas"><b class="js-roas">2,6</b><span>ROAS sin IVA</span></div>
+        <button class="sim-btn" type="button" data-d="0.1" aria-label="Subir ROAS">+</button>
+        <input class="sim-range" type="range" min="1.5" max="3.6" step="0.1" value="2.6" aria-label="ROAS sin IVA">
+      </div>
+      <div class="sim-out">
+        <div><span>Venta al mes, con IVA</span><b class="big js-venta">$563,1M</b><em class="js-x">× 6,4 frente a hoy</em></div>
+        <div><span>Pedidos al mes</span><b class="js-ped">3.861</b><em class="js-dia">129 al día</em></div>
+        <div><span>Pago por venta</span><b class="js-cpa">$47.136</b><em>máximo $79.172</em></div>
+        <div><span>Queda después de producto y pauta</span><b class="js-queda">$123,7M</b><em class="js-qx">$96,9M más que hoy</em></div>
+      </div>
+      <p class="sim-msg js-msg"><i></i><span class="js-msg-t">Muy por encima del break-even de 1,55.</span></p>
+    </div>
     <p class="note"><strong>El margen de seguridad:</strong> vendiendo $500 millones, mientras el ROAS no baje de <strong>1,72</strong> queda más plata que hoy. Subimos un escalón a la vez y solo pasamos al siguiente cuando el anterior se sostiene. "Queda" es antes de pasarela, impuestos y gastos fijos.</p>
   </section>
 
@@ -544,5 +584,37 @@ strong{font-weight:600;color:var(--ink);}
     <span>juanfe@larealmarketing.com · landing.larealmarketing.com</span>
   </footer>
 </div>
+<script>
+(function(){
+  var INV=182e6, TICKET=122557, COSTO=43385/122557, IVA=1.19, BE=1.55, HOY_VENTA=88.1e6, HOY_QUEDA=26.8e6;
+  var MIN=(HOY_QUEDA+INV)/(INV*(1-43385/122557));
+  var root=document.getElementById('sim'); if(!root) return;
+  var range=root.querySelector('.sim-range');
+  function q(c){return root.querySelector(c);}
+  function dec(n,d){return n.toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function m(n){return (n<0?'−':'')+'$'+dec(Math.abs(n)/1e6,1)+'M';}
+  function render(r){
+    r=Math.round(Math.min(3.6,Math.max(1.5,r))*10)/10; range.value=r;
+    var sin=INV*r, con=sin*IVA, ped=sin/TICKET, queda=sin*(1-COSTO)-INV, rt=dec(r,1);
+    q('.js-roas').textContent=rt; q('.js-roas-t').textContent=rt;
+    q('.js-venta').textContent=m(con);
+    q('.js-x').textContent='× '+dec(con/HOY_VENTA,1)+' frente a hoy';
+    q('.js-ped').textContent=Math.round(ped).toLocaleString('es-CO');
+    q('.js-dia').textContent=Math.round(ped/30).toLocaleString('es-CO')+' al día';
+    q('.js-cpa').textContent='$'+Math.round(INV/ped).toLocaleString('es-CO');
+    q('.js-queda').textContent=m(queda);
+    var d=queda-HOY_QUEDA;
+    q('.js-qx').textContent=m(Math.abs(d))+(d>=0?' más':' menos')+' que hoy';
+    var msg=q('.js-msg'), t;
+    if(r<BE){msg.className='sim-msg js-msg bad';t='Por debajo del break-even de 1,55: cada venta pierde plata. Aquí se apaga.';}
+    else if(queda<HOY_QUEDA){msg.className='sim-msg js-msg warn';t='Por encima del break-even, pero queda menos plata que hoy con más inversión. No vale la pena escalar a este nivel.';}
+    else{msg.className='sim-msg js-msg';t='Por encima del break-even de 1,55 y deja más plata que hoy. Con $182 millones, desde un ROAS de '+dec(MIN,2)+' queda más que hoy.';}
+    q('.js-msg-t').textContent=t;
+  }
+  range.addEventListener('input',function(){render(parseFloat(range.value));});
+  root.querySelectorAll('.sim-btn').forEach(function(b){b.addEventListener('click',function(){render(parseFloat(range.value)+parseFloat(b.dataset.d));});});
+  render(2.6);
+})();
+</script>
 </body>
 </html>
