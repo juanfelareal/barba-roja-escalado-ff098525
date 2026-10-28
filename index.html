@@ -302,7 +302,7 @@ strong{font-weight:600;color:var(--ink);}
 
 /* Tabla de productos en grid */
 .ptable{margin-top:22px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden;}
-.pr{display:grid;grid-template-columns:2.2fr repeat(5,1fr);gap:10px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px;font-variant-numeric:tabular-nums;}
+.pr{display:grid;grid-template-columns:2fr repeat(6,1fr);gap:10px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px;font-variant-numeric:tabular-nums;}
 .pr:last-child{border-bottom:0;}
 .pr .pv{text-align:right;}
 .pr .pv span{display:none;}
@@ -385,57 +385,57 @@ strong{font-weight:600;color:var(--ink);}
   <!-- LÍNEA DE ROAS -->
   <section>
     <p class="label">El espacio para escalar</p>
-    <h2>De <b>1,55</b> a <b>3,52</b>: todo lo que está en medio es margen para crecer.</h2>
-    <p>A la izquierda, el ROAS mínimo para no perder plata en cada venta. A la derecha, el que tiene la marca hoy. Cada punto de la línea dice cuánto se puede pagar por una venta y cuánto deja cada pedido después del producto y la pauta.</p>
+    <h2>De <b>1,63</b> a <b>3,52</b>: todo lo que está en medio es margen para crecer.</h2>
+    <p>A la izquierda, el ROAS mínimo para no perder plata en cada venta. A la derecha, el que tiene la marca hoy. Cada punto de la línea dice cuánto se puede pagar por una venta y cuánto deja cada pedido después del producto, la comisión de la pasarela y la pauta.</p>
 
     <div class="tl-card">
       <div class="tl">
         <div class="tl-track"></div>
-        <div class="tl-loss" style="--a:0%;--b:18.3%"><span>Pierde plata</span></div>
-        <div class="tl-room" style="--a:18.3%;--b:84.1%"><span>Espacio para escalar</span></div>
+        <div class="tl-loss" style="--a:0%;--b:21.1%"><span>Pierde plata</span></div>
+        <div class="tl-room" style="--a:21.1%;--b:84.1%"><span>Espacio para escalar</span></div>
 
-        <div class="stop end left" style="--x:18.3%">
+        <div class="stop end left" style="--x:21.1%">
           <span class="pin"></span>
-          <div class="txt"><span class="label">Break-even ROAS</span><b>1,55</b><em>Pago máximo por venta: $79.069</em><em>Deja: $0 por pedido</em></div>
+          <div class="txt"><span class="label">Break-even ROAS</span><b>1,63</b><em>Pago máximo por venta: $75.091</em><em>Deja: $0 por pedido</em></div>
         </div>
-        <div class="stop" style="--x:33.3%"><span class="pin"></span><div class="txt"><b>2,0</b><em>Paga $61.278</em><em>Deja $17.894</em></div></div>
-        <div class="stop" style="--x:50%"><span class="pin"></span><div class="txt"><b>2,5</b><em>Paga $49.023</em><em>Deja $30.149</em></div></div>
-        <div class="stop" style="--x:66.7%"><span class="pin"></span><div class="txt"><b>3,0</b><em>Paga $40.852</em><em>Deja $38.320</em></div></div>
+        <div class="stop" style="--x:33.3%"><span class="pin"></span><div class="txt"><b>2,0</b><em>Paga $61.278</em><em>Deja $13.813</em></div></div>
+        <div class="stop" style="--x:50%"><span class="pin"></span><div class="txt"><b>2,5</b><em>Paga $49.023</em><em>Deja $26.068</em></div></div>
+        <div class="stop" style="--x:66.7%"><span class="pin"></span><div class="txt"><b>3,0</b><em>Paga $40.852</em><em>Deja $34.239</em></div></div>
         <div class="stop end right" style="--x:84.1%">
           <span class="pin"></span>
-          <div class="txt"><span class="label">Blended ROAS hoy</span><b>3,52</b><em>Pago por venta hoy: $34.911</em><em>Deja: $44.355 por pedido</em></div>
+          <div class="txt"><span class="label">Blended ROAS hoy</span><b>3,52</b><em>Pago por venta hoy: $34.911</em><em>Deja: $40.180 por pedido</em></div>
         </div>
       </div>
       <div class="tl-axis"><span>1,0</span><span>2,0</span><span>3,0</span><span>4,0</span></div>
     </div>
 
     <div class="facts">
-      <div class="fact"><b>$79.172</b><span>Lo máximo que se puede pagar por una venta sin perder plata (CPA máximo)</span></div>
+      <div class="fact"><b>$75.091</b><span>Lo máximo que se puede pagar por una venta sin perder plata (CPA máximo)</span></div>
       <div class="fact"><b>$34.911</b><span>Lo que se está pagando hoy por cada venta, últimos 30 días</span></div>
-      <div class="fact dark"><b>2,3×</b><span>Hoy se paga menos de la mitad de lo que se podría. Escalabilidad <strong>alta</strong></span></div>
+      <div class="fact dark"><b>2,2×</b><span>Hoy se paga menos de la mitad de lo que se podría. Escalabilidad <strong>alta</strong></span></div>
     </div>
-    <p class="note"><strong>Cómo se calcula el break-even ROAS:</strong> ticket promedio ($122.557 sin IVA, 1.877 pedidos en 90 días) ÷ (ticket − costo de producto por pedido de $43.385, el 35,4 %). El envío lo paga el cliente, así que no suma costo. El blended ROAS es toda la venta de la tienda sin IVA ÷ toda la inversión en pauta de los últimos 30 días.</p>
+    <p class="note"><strong>Cómo se calcula el break-even ROAS:</strong> ticket promedio ($122.557 sin IVA, 1.877 pedidos en 90 días) ÷ (ticket − costo de producto de $43.385 − comisión de pasarela de $4.081). <strong>La comisión es la tarifa Bold 2026 de Barba Roja:</strong> 2,49 % + $450 por transacción, calculada sobre el valor cobrado con IVA y ya con el IVA de la tarifa incluido. Tomamos la tarifa de tarjeta de crédito, la más alta; PSE, Nequi y débito están 0,1 puntos por debajo. El envío lo paga el cliente, así que no suma costo (su comisión tampoco está contada). El blended ROAS es toda la venta de la tienda sin IVA ÷ toda la inversión en pauta de los últimos 30 días.</p>
   </section>
 
   <!-- PRODUCTOS -->
   <section>
     <p class="label">Por producto</p>
     <h2>Todos los productos tienen espacio, <b>unos más que otros.</b></h2>
-    <p>El break-even de cada producto sale de su precio sin IVA y su costo. Mientras más bajo, más se puede invertir para venderlo. Los ordenamos de más a menos espacio.</p>
+    <p>El break-even de cada producto sale de su precio sin IVA, su costo y la comisión de Bold. Mientras más bajo, más se puede invertir para venderlo. Los ordenamos de más a menos espacio.</p>
     <div class="ptable">
-        <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Pago máx. por venta</div><div class="pv">Break-even</div><div class="pv">Unidades 90 días</div></div>
-        <div class="pr hl"><div class="pn">Bálsamo de Barba</div><div class="pv"><span>Precio sin IVA</span>$37.815</div><div class="pv"><span>Costo</span>$6.935</div><div class="pv"><span>Pago máx. por venta</span>$30.880</div><div class="pv be"><span>Break-even</span>1,22</div><div class="pv"><span>Unidades 90 días</span>170</div></div>
-        <div class="pr hl"><div class="pn">Kit Cuidado Facial</div><div class="pv"><span>Precio sin IVA</span>$83.950</div><div class="pv"><span>Costo</span>$25.247</div><div class="pv"><span>Pago máx. por venta</span>$58.703</div><div class="pv be"><span>Break-even</span>1,43</div><div class="pv"><span>Unidades 90 días</span>90</div></div>
-        <div class="pr"><div class="pn">Cera mate</div><div class="pv"><span>Precio sin IVA</span>$40.336</div><div class="pv"><span>Costo</span>$12.725</div><div class="pv"><span>Pago máx. por venta</span>$27.611</div><div class="pv be"><span>Break-even</span>1,46</div><div class="pv"><span>Unidades 90 días</span>119</div></div>
-        <div class="pr"><div class="pn">Kit de Barba</div><div class="pv"><span>Precio sin IVA</span>$102.101</div><div class="pv"><span>Costo</span>$33.235</div><div class="pv"><span>Pago máx. por venta</span>$68.866</div><div class="pv be"><span>Break-even</span>1,48</div><div class="pv"><span>Unidades 90 días</span>177</div></div>
-        <div class="pr"><div class="pn">Kit Ritual de Ducha</div><div class="pv"><span>Precio sin IVA</span>$93.782</div><div class="pv"><span>Costo</span>$30.777</div><div class="pv"><span>Pago máx. por venta</span>$63.005</div><div class="pv be"><span>Break-even</span>1,49</div><div class="pv"><span>Unidades 90 días</span>43</div></div>
-        <div class="pr"><div class="pn">Kit de cuidado Cabello y Barba</div><div class="pv"><span>Precio sin IVA</span>$138.403</div><div class="pv"><span>Costo</span>$45.960</div><div class="pv"><span>Pago máx. por venta</span>$92.443</div><div class="pv be"><span>Break-even</span>1,50</div><div class="pv"><span>Unidades 90 días</span>157</div></div>
-        <div class="pr hl"><div class="pn">Kit Crecimiento de Barba <span class="tagm">El más vendido</span></div><div class="pv"><span>Precio sin IVA</span>$105.882</div><div class="pv"><span>Costo</span>$36.950</div><div class="pv"><span>Pago máx. por venta</span>$68.932</div><div class="pv be"><span>Break-even</span>1,54</div><div class="pv"><span>Unidades 90 días</span>326</div></div>
-        <div class="pr"><div class="pn">Kit Cabello</div><div class="pv"><span>Precio sin IVA</span>$104.370</div><div class="pv"><span>Costo</span>$39.025</div><div class="pv"><span>Pago máx. por venta</span>$65.345</div><div class="pv be"><span>Break-even</span>1,60</div><div class="pv"><span>Unidades 90 días</span>51</div></div>
-        <div class="pr"><div class="pn">Shampoo 500 mL <span class="tagm">Costo por confirmar</span></div><div class="pv"><span>Precio sin IVA</span>$65.546</div><div class="pv"><span>Costo</span>$26.300</div><div class="pv"><span>Pago máx. por venta</span>$39.246</div><div class="pv be"><span>Break-even</span>1,67</div><div class="pv"><span>Unidades 90 días</span>180</div></div>
-        <div class="pr"><div class="pn">Tónico Crecimiento de Barba &amp; Cabello</div><div class="pv"><span>Precio sin IVA</span>$42.017</div><div class="pv"><span>Costo</span>$16.865</div><div class="pv"><span>Pago máx. por venta</span>$25.152</div><div class="pv be"><span>Break-even</span>1,67</div><div class="pv"><span>Unidades 90 días</span>293</div></div>
+        <div class="pr ph"><div class="pn">Producto</div><div class="pv">Precio sin IVA</div><div class="pv">Costo</div><div class="pv">Comisión Bold</div><div class="pv">Pago máx. por venta</div><div class="pv">Break-even</div><div class="pv">Unidades 90 días</div></div>
+        <div class="pr hl"><div class="pn">Bálsamo de Barba</div><div class="pv"><span>Precio sin IVA</span>$37.815</div><div class="pv"><span>Costo</span>$6.935</div><div class="pv"><span>Comisión Bold</span>$1.570</div><div class="pv"><span>Pago máx. por venta</span>$29.310</div><div class="pv be"><span>Break-even</span>1,29</div><div class="pv"><span>Unidades 90 días</span>170</div></div>
+        <div class="pr hl"><div class="pn">Kit Cuidado Facial</div><div class="pv"><span>Precio sin IVA</span>$83.950</div><div class="pv"><span>Costo</span>$25.247</div><div class="pv"><span>Comisión Bold</span>$2.938</div><div class="pv"><span>Pago máx. por venta</span>$55.765</div><div class="pv be"><span>Break-even</span>1,51</div><div class="pv"><span>Unidades 90 días</span>90</div></div>
+        <div class="pr"><div class="pn">Cera mate</div><div class="pv"><span>Precio sin IVA</span>$40.336</div><div class="pv"><span>Costo</span>$12.725</div><div class="pv"><span>Comisión Bold</span>$1.645</div><div class="pv"><span>Pago máx. por venta</span>$25.966</div><div class="pv be"><span>Break-even</span>1,55</div><div class="pv"><span>Unidades 90 días</span>119</div></div>
+        <div class="pr"><div class="pn">Kit de Barba</div><div class="pv"><span>Precio sin IVA</span>$102.101</div><div class="pv"><span>Costo</span>$33.235</div><div class="pv"><span>Comisión Bold</span>$3.475</div><div class="pv"><span>Pago máx. por venta</span>$65.391</div><div class="pv be"><span>Break-even</span>1,56</div><div class="pv"><span>Unidades 90 días</span>177</div></div>
+        <div class="pr"><div class="pn">Kit Ritual de Ducha</div><div class="pv"><span>Precio sin IVA</span>$93.782</div><div class="pv"><span>Costo</span>$30.777</div><div class="pv"><span>Comisión Bold</span>$3.229</div><div class="pv"><span>Pago máx. por venta</span>$59.776</div><div class="pv be"><span>Break-even</span>1,57</div><div class="pv"><span>Unidades 90 días</span>43</div></div>
+        <div class="pr"><div class="pn">Kit de cuidado Cabello y Barba</div><div class="pv"><span>Precio sin IVA</span>$138.403</div><div class="pv"><span>Costo</span>$45.960</div><div class="pv"><span>Comisión Bold</span>$4.551</div><div class="pv"><span>Pago máx. por venta</span>$87.892</div><div class="pv be"><span>Break-even</span>1,57</div><div class="pv"><span>Unidades 90 días</span>157</div></div>
+        <div class="pr hl"><div class="pn">Kit Crecimiento de Barba <span class="tagm">El más vendido</span></div><div class="pv"><span>Precio sin IVA</span>$105.882</div><div class="pv"><span>Costo</span>$36.950</div><div class="pv"><span>Comisión Bold</span>$3.587</div><div class="pv"><span>Pago máx. por venta</span>$65.345</div><div class="pv be"><span>Break-even</span>1,62</div><div class="pv"><span>Unidades 90 días</span>326</div></div>
+        <div class="pr"><div class="pn">Kit Cabello</div><div class="pv"><span>Precio sin IVA</span>$104.370</div><div class="pv"><span>Costo</span>$39.025</div><div class="pv"><span>Comisión Bold</span>$3.543</div><div class="pv"><span>Pago máx. por venta</span>$61.802</div><div class="pv be"><span>Break-even</span>1,69</div><div class="pv"><span>Unidades 90 días</span>51</div></div>
+        <div class="pr"><div class="pn">Shampoo 500 mL <span class="tagm">Costo por confirmar</span></div><div class="pv"><span>Precio sin IVA</span>$65.546</div><div class="pv"><span>Costo</span>$26.300</div><div class="pv"><span>Comisión Bold</span>$2.392</div><div class="pv"><span>Pago máx. por venta</span>$36.854</div><div class="pv be"><span>Break-even</span>1,78</div><div class="pv"><span>Unidades 90 días</span>180</div></div>
+        <div class="pr"><div class="pn">Tónico Crecimiento de Barba &amp; Cabello</div><div class="pv"><span>Precio sin IVA</span>$42.017</div><div class="pv"><span>Costo</span>$16.865</div><div class="pv"><span>Comisión Bold</span>$1.695</div><div class="pv"><span>Pago máx. por venta</span>$23.457</div><div class="pv be"><span>Break-even</span>1,79</div><div class="pv"><span>Unidades 90 días</span>293</div></div>
     </div>
-    <p class="fine">Los 10 productos más vendidos entre el 28 de julio y el 25 de octubre (53 % de la venta). El costo de los kits es la suma de lo que trae cada uno. El Shampoo 500 mL quedó estimado como dos de 250 mL mientras confirmamos su costo.</p>
+    <p class="fine">Los 10 productos más vendidos entre el 28 de julio y el 25 de octubre (53 % de la venta). El costo de los kits es la suma de lo que trae cada uno. La comisión de Bold es 2,49 % + $450 sobre el precio con IVA, asumiendo un producto por pedido: en pedidos de varios productos el fijo de $450 se reparte y el break-even baja un poco. El Shampoo 500 mL quedó estimado como dos de 250 mL mientras confirmamos su costo.</p>
   </section>
 
   <!-- OPCIONES -->
@@ -447,7 +447,7 @@ strong{font-weight:600;color:var(--ink);}
       <li><span class="k">02</span><div><h3>Rescatar los anuncios ganadores de siempre</h3><p>Sacamos los anuncios históricos que vendieron por encima del break-even y con volumen, y los ponemos a competir en la campaña de escalado con su misma publicación (post ID), para que no pierdan lo que ya aprendieron.</p></div></li>
       <li><span class="k">03</span><div><h3>Pruebas de creativos con presupuesto de verdad</h3><p>Cada prueba lleva de 3 a 5 creativos con unos <strong>$400.000 al día durante 72 horas</strong>, para saber rápido cuál gana. Gastar más en pruebas no hace perder plata: hace ganar tiempo.</p></div></li>
       <li><span class="k">04</span><div><h3>Creativos para cada etapa de la compra</h3><p>Anuncios para quien todavía no conoce la marca, para quien la conoce pero no entiende cómo funciona y para quien ya está por comprar. Así entra gente nueva todo el tiempo y no le hablamos siempre a los mismos.</p></div></li>
-      <li><span class="k">05</span><div><h3>Empujar primero los productos con más espacio</h3><p>El <strong>Bálsamo</strong> (1,22) y el <strong>Kit Cuidado Facial</strong> (1,43) aguantan más inversión por venta. El <strong>Kit Crecimiento</strong> (1,54) es el que mueve el volumen. Escalamos uno a la vez y los demás se venden por añadidura.</p></div></li>
+      <li><span class="k">05</span><div><h3>Empujar primero los productos con más espacio</h3><p>El <strong>Bálsamo</strong> (1,29) y el <strong>Kit Cuidado Facial</strong> (1,51) aguantan más inversión por venta. El <strong>Kit Crecimiento</strong> (1,62) es el que mueve el volumen. Escalamos uno a la vez y los demás se venden por añadidura.</p></div></li>
       <li><span class="k">06</span><div><h3>Que el email y el orgánico sumen más</h3><p>Hoy la venta total es apenas un 19 % más que lo que Meta se atribuye. En marcas sanas es un 40 % a 50 % más. Ese pedazo sale de email, redes y clientes que vuelven a comprar.</p></div></li>
     </ul>
   </section>
@@ -456,7 +456,7 @@ strong{font-weight:600;color:var(--ink);}
   <section>
     <p class="label">Ruta de escalado</p>
     <h2>De $88 millones a <b>$500 millones al mes.</b></h2>
-    <p>Cuando se invierte más, el ROAS baja: cada peso nuevo encuentra clientes un poco más caros. Por eso cada escalón asume un ROAS menor que el de hoy. Aun así, todos quedan lejos del break-even de 1,55 y cada escalón deja más plata en pesos que el anterior, aunque cada pedido deje menos. Son escenarios para dimensionar, no una promesa.</p>
+    <p>Cuando se invierte más, el ROAS baja: cada peso nuevo encuentra clientes un poco más caros. Por eso cada escalón asume un ROAS menor que el de hoy. Aun así, todos quedan lejos del break-even de 1,63 y cada escalón deja más plata en pesos que el anterior, aunque cada pedido deje menos. Son escenarios para dimensionar, no una promesa.</p>
     <div class="route">
       <div class="step-r">
         <div class="sr-head"><span class="label">Hoy</span><span class="sr-x">últimos 30 días</span></div>
@@ -466,7 +466,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión en pauta</span>$21,0M<em>$0,7M al día</em></div>
           <div><span>ROAS sin IVA</span>3,52</div>
           <div><span>Pedidos al mes</span>602</div>
-          <div><span>Queda después de producto y pauta</span>$26,8M</div>
+          <div><span>Queda después de producto, pasarela y pauta</span>$24,4M</div>
         </div>
       </div>
       <div class="step-r">
@@ -477,7 +477,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión en pauta</span>$39,4M<em>$1,3M al día</em></div>
           <div><span>ROAS sin IVA</span>3,2</div>
           <div><span>Pedidos al mes</span>1.029</div>
-          <div><span>Queda después de producto y pauta</span>$42,0M</div>
+          <div><span>Queda después de producto, pasarela y pauta</span>$37,8M</div>
         </div>
       </div>
       <div class="step-r">
@@ -488,7 +488,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión en pauta</span>$72,4M<em>$2,4M al día</em></div>
           <div><span>ROAS sin IVA</span>2,9</div>
           <div><span>Pedidos al mes</span>1.714</div>
-          <div><span>Queda después de producto y pauta</span>$63,3M</div>
+          <div><span>Queda después de producto, pasarela y pauta</span>$56,3M</div>
         </div>
       </div>
       <div class="step-r">
@@ -499,7 +499,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión en pauta</span>$113,1M<em>$3,8M al día</em></div>
           <div><span>ROAS sin IVA</span>2,6</div>
           <div><span>Pedidos al mes</span>2.400</div>
-          <div><span>Queda después de producto y pauta</span>$76,9M</div>
+          <div><span>Queda después de producto, pasarela y pauta</span>$67,1M</div>
         </div>
       </div>
       <div class="step-r goal">
@@ -510,7 +510,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión en pauta</span>$182,7M<em>$6,1M al día</em></div>
           <div><span>ROAS sin IVA</span>2,3</div>
           <div><span>Pedidos al mes</span>3.428</div>
-          <div><span>Queda después de producto y pauta</span>$88,7M</div>
+          <div><span>Queda después de producto, pasarela y pauta</span>$74,7M</div>
         </div>
       </div>
     </div>
@@ -527,12 +527,12 @@ strong{font-weight:600;color:var(--ink);}
       <div class="sim-out">
         <div><span>Venta al mes, con IVA</span><b class="big js-venta">$563,1M</b><em class="js-x">× 6,4 frente a hoy</em></div>
         <div><span>Pedidos al mes</span><b class="js-ped">3.861</b><em class="js-dia">129 al día</em></div>
-        <div><span>Pago por venta</span><b class="js-cpa">$47.136</b><em>máximo $79.172</em></div>
-        <div><span>Queda después de producto y pauta</span><b class="js-queda">$123,7M</b><em class="js-qx">$96,9M más que hoy</em></div>
+        <div><span>Pago por venta</span><b class="js-cpa">$47.137</b><em>máximo $75.091</em></div>
+        <div><span>Queda después de producto, pasarela y pauta</span><b class="js-queda">$107,9M</b><em class="js-qx">$83,6M más que hoy</em></div>
       </div>
-      <p class="sim-msg js-msg"><i></i><span class="js-msg-t">Muy por encima del break-even de 1,55.</span></p>
+      <p class="sim-msg js-msg"><i></i><span class="js-msg-t">Muy por encima del break-even de 1,63.</span></p>
     </div>
-    <p class="note"><strong>El margen de seguridad:</strong> vendiendo $500 millones, mientras el ROAS no baje de <strong>1,72</strong> queda más plata que hoy. Subimos un escalón a la vez y solo pasamos al siguiente cuando el anterior se sostiene. "Queda" es antes de pasarela, impuestos y gastos fijos.</p>
+    <p class="note"><strong>El margen de seguridad:</strong> invirtiendo $182 millones al mes, mientras el ROAS no baje de <strong>1,85</strong> queda más plata que hoy. Subimos un escalón a la vez y solo pasamos al siguiente cuando el anterior se sostiene. "Queda" ya tiene descontada la comisión de la pasarela; es antes de impuestos y gastos fijos.</p>
   </section>
 
   <!-- QUÉ SE NECESITA -->
@@ -552,9 +552,9 @@ strong{font-weight:600;color:var(--ink);}
     <p class="label">Cómo cuidamos la plata</p>
     <h2>Reglas para crecer <b>sin salirnos del margen.</b></h2>
     <div class="sem">
-      <div class="sem-item"><span class="sem-dot" style="background:#44BF47"></span><span><b>Se queda —</b> todo anuncio que en los últimos 7 días esté por encima de <b>1,84</b> de ROAS en Meta (el 1,55 con el IVA que cuenta Meta).</span></div>
+      <div class="sem-item"><span class="sem-dot" style="background:#44BF47"></span><span><b>Se queda —</b> todo anuncio que en los últimos 7 días esté por encima de <b>1,94</b> de ROAS en Meta (el 1,63 con el IVA que cuenta Meta).</span></div>
       <div class="sem-item"><span class="sem-dot" style="background:#E0A126"></span><span><b>Se mide —</b> los anuncios nuevos se juzgan por la venta total de la tienda desde que arrancó la prueba, no solo por lo que dice Meta.</span></div>
-      <div class="sem-item"><span class="sem-dot" style="background:#D2453B"></span><span><b>Se apaga —</b> solo lo que esté por debajo de 1,84 en los últimos 7 días. Un anuncio que apenas arranca no se toca.</span></div>
+      <div class="sem-item"><span class="sem-dot" style="background:#D2453B"></span><span><b>Se apaga —</b> solo lo que esté por debajo de 1,94 en los últimos 7 días. Un anuncio que apenas arranca no se toca.</span></div>
     </div>
   </section>
 
@@ -564,7 +564,7 @@ strong{font-weight:600;color:var(--ink);}
     <h2>Datos para <b>afinar los números.</b></h2>
     <ul class="inc">
       <li><div>Costo del Shampoo y el Acondicionador de 500 mL<span>Hoy están estimados. El Shampoo 500 mL es el quinto producto más vendido.</span></div></li>
-      <li><div>Comisión de la pasarela de pagos y de Shopify<span>Con eso sacamos el break-even completo, con todo lo que cuesta cada venta.</span></div></li>
+      <li><div>Si Shopify cobra algo extra por usar Bold<span>La tarifa de Bold (2,49 % + $450) ya está en estos números. Falta saber si Shopify les cobra un porcentaje adicional por no usar Shopify Payments.</span></div></li>
       <li><div>Régimen de impuestos (SIMPLE u ordinario)<span>Los impuestos sobre la venta también salen de cada pedido.</span></div></li>
       <li><div>Inventario y tiempos de producción<span>Si duplicamos ventas, ¿cuántas unidades hay de cada producto y en cuánto tiempo se reponen? Escalar sin stock es perder la inversión.</span></div></li>
     </ul>
@@ -586,8 +586,10 @@ strong{font-weight:600;color:var(--ink);}
 </div>
 <script>
 (function(){
-  var INV=182e6, TICKET=122557, COSTO=43385/122557, IVA=1.19, BE=1.55, HOY_VENTA=88.1e6, HOY_QUEDA=26.8e6;
-  var MIN=(HOY_QUEDA+INV)/(INV*(1-43385/122557));
+  var INV=182e6, TICKET=122557, COSTO=43385/122557, IVA=1.19, BE=1.63, HOY_VENTA=88.1e6, HOY_QUEDA=24.363e6;
+  /* Comisión Bold: 2,49 % + $450 por transacción sobre el valor cobrado con IVA, como fracción de la venta sin IVA. */
+  var COM=0.0249*IVA+450/TICKET;
+  var MIN=(HOY_QUEDA+INV)/(INV*(1-COSTO-COM));
   var root=document.getElementById('sim'); if(!root) return;
   var range=root.querySelector('.sim-range');
   function q(c){return root.querySelector(c);}
@@ -595,7 +597,7 @@ strong{font-weight:600;color:var(--ink);}
   function m(n){return (n<0?'−':'')+'$'+dec(Math.abs(n)/1e6,1)+'M';}
   function render(r){
     r=Math.round(Math.min(3.6,Math.max(1.5,r))*10)/10; range.value=r;
-    var sin=INV*r, con=sin*IVA, ped=sin/TICKET, queda=sin*(1-COSTO)-INV, rt=dec(r,1);
+    var sin=INV*r, con=sin*IVA, ped=sin/TICKET, queda=sin*(1-COSTO-COM)-INV, rt=dec(r,1);
     q('.js-roas').textContent=rt; q('.js-roas-t').textContent=rt;
     q('.js-venta').textContent=m(con);
     q('.js-x').textContent='× '+dec(con/HOY_VENTA,1)+' frente a hoy';
@@ -606,9 +608,9 @@ strong{font-weight:600;color:var(--ink);}
     var d=queda-HOY_QUEDA;
     q('.js-qx').textContent=m(Math.abs(d))+(d>=0?' más':' menos')+' que hoy';
     var msg=q('.js-msg'), t;
-    if(r<BE){msg.className='sim-msg js-msg bad';t='Por debajo del break-even de 1,55: cada venta pierde plata. Aquí se apaga.';}
+    if(r<BE){msg.className='sim-msg js-msg bad';t='Por debajo del break-even de 1,63: cada venta pierde plata. Aquí se apaga.';}
     else if(queda<HOY_QUEDA){msg.className='sim-msg js-msg warn';t='Por encima del break-even, pero queda menos plata que hoy con más inversión. No vale la pena escalar a este nivel.';}
-    else{msg.className='sim-msg js-msg';t='Por encima del break-even de 1,55 y deja más plata que hoy. Con $182 millones, desde un ROAS de '+dec(MIN,2)+' queda más que hoy.';}
+    else{msg.className='sim-msg js-msg';t='Por encima del break-even de 1,63 y deja más plata que hoy. Con $182 millones, desde un ROAS de '+dec(MIN,2)+' queda más que hoy.';}
     q('.js-msg-t').textContent=t;
   }
   range.addEventListener('input',function(){render(parseFloat(range.value));});
