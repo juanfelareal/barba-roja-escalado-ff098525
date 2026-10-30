@@ -259,6 +259,43 @@ strong{font-weight:600;color:var(--ink);}
 .stop.end.right .txt .label{justify-content:flex-end;}
 .stop.end .txt em{font-size:12.5px;color:var(--ink-2);}
 .tl-axis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--muted);border-top:1px dashed var(--line-2);padding-top:8px;margin-top:4px;}
+
+/* Barra de ROAS: el dibujo arriba, los números en tabla debajo */
+.rb{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:30px 28px 24px;margin-top:26px;}
+.rb-ends{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
+.rb-end{max-width:46%;}
+.rb-end b{display:block;font-size:clamp(34px,6vw,48px);font-weight:300;letter-spacing:-.04em;line-height:1.05;margin-top:8px;font-variant-numeric:tabular-nums;}
+.rb-end em{display:block;font-style:normal;font-size:13px;color:var(--ink-2);margin-top:6px;line-height:1.4;}
+.rb-end.r{text-align:right;}
+.rb-end.r .label{justify-content:flex-end;}
+.rb-bar{position:relative;height:16px;border-radius:999px;background:var(--line);margin-top:26px;}
+.rb-bar i{position:absolute;top:0;bottom:0;border-radius:999px;}
+.rb-loss{left:0;background:repeating-linear-gradient(135deg,rgba(210,69,59,.22) 0 6px,rgba(210,69,59,.07) 6px 12px);}
+.rb-room{background:var(--accent);}
+.rb-pin{position:absolute;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:3px solid var(--surface);}
+.rb-pin.be{background:var(--ink);}
+.rb-pin.now{background:var(--accent);}
+.rb-key{position:relative;height:14px;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;}
+.rb-k{position:absolute;top:0;white-space:nowrap;}
+.rb-k.loss{left:0;color:#B23A31;}
+.rb-k.room{left:var(--c);transform:translateX(-50%);color:#2c8a2f;}
+.rb-tab{margin-top:28px;border-top:1px solid var(--ink);}
+.rb-r{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums;color:var(--ink-2);}
+.rb-r .c{text-align:right;}
+.rb-r b{font-size:17px;font-weight:500;color:var(--ink);margin-right:7px;}
+.rb-r.h{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 0 10px;border-bottom:0;}
+.rb-r.h .c{text-align:right;}
+.rb-r.be b,.rb-r.now b{font-weight:600;}
+.rb-r.now{background:rgba(68,191,71,.09);margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:var(--r-md);border-bottom-color:transparent;}
+@media (max-width:720px){
+  .rb{padding:24px 18px 20px;}
+  .rb-ends{flex-direction:column;gap:18px;}
+  .rb-end,.rb-end.r{max-width:none;text-align:left;}
+  .rb-end.r .label{justify-content:flex-start;}
+  .rb-r{grid-template-columns:1fr auto auto;gap:10px;font-size:14px;}
+}
+@media print{.rb{break-inside:avoid;}}
+
 /* Datos clave */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;}
 .fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 20px;}
@@ -310,6 +347,16 @@ strong{font-weight:600;color:var(--ink);}
 .pr.ph{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:15px;padding-bottom:15px;}
 .pr.hl{background:rgba(68,191,71,.08);}
 .pr.hl .be{font-weight:600;}
+
+/* Control de ROAS dentro de cada escalón */
+.rs{display:flex;align-items:center;gap:7px;margin-top:1px;}
+.rs-b{width:25px;height:25px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--ink);font:400 15px/1 var(--sans);cursor:pointer;flex:none;display:grid;place-items:center;padding:0;}
+.rs-b:hover{border-color:var(--accent);color:#2c8a2f;}
+.rs-v{font-size:16px;font-weight:500;font-variant-numeric:tabular-nums;min-width:28px;text-align:center;}
+.step-r.goal .rs-b{border-color:rgba(243,241,237,.28);color:var(--on-dark);}
+.step-r.goal .rs-b:hover{border-color:var(--accent);color:var(--accent);}
+@media print{.rs-b{display:none;}}
+
 /* Ruta a 500M */
 .route{display:grid;gap:10px;margin-top:24px;}
 .step-r{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 22px;display:grid;grid-template-columns:150px 170px 1fr;grid-template-areas:"h v g" "w w w" "b b b";gap:8px 20px;align-items:center;}
@@ -409,30 +456,31 @@ strong{font-weight:600;color:var(--ink);}
     <h2>De <b>1,68</b> a <b>3,22</b>: todo lo que está en medio es margen para crecer.</h2>
     <p>A la izquierda, el ROAS mínimo para no perder plata en cada venta. A la derecha, el que tiene la marca hoy. Cada punto de la línea dice cuánto se puede pagar por una venta y cuánto deja cada pedido después del producto, la comisión de la pasarela y la pauta.</p>
 
-    <div class="tl-card">
-      <div class="tl">
-        <div class="tl-track"></div>
-        <div class="tl-loss" style="--a:0%;--b:22.5%"><span>Pierde plata</span></div>
-        <div class="tl-room" style="--a:22.5%;--b:74%"><span>Espacio para escalar</span></div>
-
-        <div class="stop end left" style="--x:22.5%">
-          <span class="pin"></span>
-          <div class="txt"><span class="label">Break-even ROAS</span><b>1,68</b><em>Pago máximo por venta: $66.888</em><em>Deja: $0 por pedido</em></div>
-        </div>
-        <div class="stop" style="--x:33.3%"><span class="pin"></span><div class="txt"><b>2,0</b><em>Paga $56.059</em><em>Deja $10.829</em></div></div>
-        <div class="stop" style="--x:50%"><span class="pin"></span><div class="txt"><b>2,5</b><em>Paga $44.847</em><em>Deja $22.041</em></div></div>
-        <div class="stop tight" style="--x:66.7%"><span class="pin"></span><div class="txt"><b>3,0</b><em>Paga $37.373</em><em>Deja $29.515</em></div></div>
-        <div class="stop end right" style="--x:74%">
-          <span class="pin"></span>
-          <div class="txt"><span class="label">Blended ROAS hoy</span><b>3,22</b><em>Pago por venta hoy: $34.912</em><em>Deja: $31.976 por pedido</em></div>
-        </div>
+    <div class="rb">
+      <div class="rb-ends">
+        <div class="rb-end"><span class="label">Break-even ROAS</span><b>1,68</b><em>Lo mínimo para no perder plata en cada venta</em></div>
+        <div class="rb-end r"><span class="label">Blended ROAS hoy</span><b>3,22</b><em>Lo que la marca está logrando</em></div>
       </div>
-      <div class="tl-axis"><span>1,0</span><span>2,0</span><span>3,0</span><span>4,0</span></div>
+      <div class="rb-bar">
+        <i class="rb-loss" style="width:22.5%"></i>
+        <i class="rb-room" style="left:22.5%;width:51.5%"></i>
+        <span class="rb-pin be" style="left:22.5%"></span>
+        <span class="rb-pin now" style="left:74.1%"></span>
+      </div>
+      <div class="rb-key"><span class="rb-k loss">Pierde plata</span><span class="rb-k room" style="--c:48.3%">Espacio para escalar</span></div>
+      <div class="rb-tab">
+      <div class="rb-r h"><span>ROAS de mercancía</span><span class="c">Paga por venta</span><span class="c">Deja por pedido</span></div>
+      <div class="rb-r be"><span><b>1,68</b> break-even</span><span class="c">$66.888</span><span class="c">$0</span></div>
+      <div class="rb-r"><span><b>2,0</b></span><span class="c">$56.059</span><span class="c">$10.829</span></div>
+      <div class="rb-r"><span><b>2,5</b></span><span class="c">$44.847</span><span class="c">$22.041</span></div>
+      <div class="rb-r"><span><b>3,0</b></span><span class="c">$37.373</span><span class="c">$29.516</span></div>
+      <div class="rb-r now"><span><b>3,22</b> hoy</span><span class="c">$34.911</span><span class="c">$31.977</span></div>
+      </div>
     </div>
 
     <div class="facts">
       <div class="fact"><b>$66.888</b><span>Lo máximo que se puede pagar por una venta sin perder plata (CPA máximo)</span></div>
-      <div class="fact"><b>$34.912</b><span>Lo que se está pagando hoy por cada venta, últimos 30 días</span></div>
+      <div class="fact"><b>$34.911</b><span>Lo que se está pagando hoy por cada venta, últimos 30 días</span></div>
       <div class="fact dark"><b>1,9×</b><span>Hoy se paga la mitad de lo que se podría. Escalabilidad <strong>alta</strong></span></div>
     </div>
     <p class="note"><strong>Cómo se calcula el break-even ROAS:</strong> ticket de mercancía ($112.118 sin IVA, 1.877 pedidos en 90 días) ÷ (ticket − costo de producto de $39.690 − comisiones de $5.540). <strong>El ticket es solo la venta de productos:</strong> no incluye el envío, que el cliente paga aparte (unos $12.423 por pedido) y la marca le entrega a la transportadora. <strong>Las comisiones son dos y las dos se cobran sobre todo lo que paga el cliente</strong> —mercancía con IVA más envío, $145.843 por pedido—: la tarifa Bold 2026 de Barba Roja, 2,49 % + $450 con el IVA de la tarifa incluido ($4.082), y el 1 % que cobra Shopify por procesar la venta con una pasarela externa ($1.458). De Bold tomamos la tarifa de crédito, la más alta; PSE, Nequi y débito están 0,1 puntos por debajo. El 1 % de Shopify va sobre todos los pedidos, asumiendo que todos pasan por Bold. El blended ROAS es la venta de mercancía sin IVA ÷ toda la inversión en pauta de los últimos 30 días.</p>
@@ -478,52 +526,7 @@ strong{font-weight:600;color:var(--ink);}
     <p class="label">Ruta de escalado</p>
     <h2>De $88 millones a <b>$500 millones al mes.</b></h2>
     <p>El escalón 1 es el de noviembre: los $250 millones con un ROAS de 2,8 que propuso Santiago en la llamada. De ahí en adelante el ROAS baja, porque cada peso nuevo encuentra clientes un poco más caros. Aun así, todos quedan lejos del break-even de 1,68 y cada escalón deja más plata en pesos que el anterior, aunque cada pedido deje menos. El último es el más delgado: pasar de $350 a $500 millones pide $59.471.287 más de inversión al mes y solo le suma $8.175.092 a la marca, así que ese salto se decide con los números del escalón 2 en la mano. Son escenarios para dimensionar, no una promesa.</p>
-    <div class="route">
-      <div class="step-r">
-        <div class="sr-head"><span class="label">Hoy</span><span class="sr-x">últimos 30 días</span></div>
-        <div class="sr-v"><b>$88.129.330</b><span>venta de la tienda al mes</span></div>
-        <div class="sr-grid">
-          <div><span>ROAS de mercancía</span>3,22</div>
-          <div><span>Inversión al día</span>$700.553</div>
-          <div><span>Pedidos al mes</span>602</div>
-        </div>
-        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$67.715.913</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$23.971.433</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$3.346.518</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$21.016.604</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$19.381.358</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$19.381.358</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$3.800.000</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$15.581.358</div></div></div>
-        <div class="sr-bar"><i style="width:17.6%"></i></div>
-      </div>
-      <div class="step-r">
-        <div class="sr-head"><span class="label">Escalón 1 · Noviembre</span><span class="sr-x">× 2,8</span></div>
-        <div class="sr-v"><b>$250M</b><span>venta de la tienda al mes</span></div>
-        <div class="sr-grid">
-          <div><span>ROAS de mercancía</span>2,8</div>
-          <div><span>Inversión al día</span>$2.287.741</div>
-          <div><span>Pedidos al mes</span>1.714</div>
-        </div>
-        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$192.170.252</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$68.028.269</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$9.495.449</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$68.632.233</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$46.014.301</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$46.014.301</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$5.521.716</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$35.992.585</div></div></div>
-        <div class="sr-bar"><i style="width:50%"></i></div>
-      </div>
-      <div class="step-r">
-        <div class="sr-head"><span class="label">Escalón 2</span><span class="sr-x">× 4</span></div>
-        <div class="sr-v"><b>$350M</b><span>venta de la tienda al mes</span></div>
-        <div class="sr-grid">
-          <div><span>ROAS de mercancía</span>2,5</div>
-          <div><span>Inversión al día</span>$3.587.776</div>
-          <div><span>Pedidos al mes</span>2.400</div>
-        </div>
-        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$269.083.200</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$95.255.453</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$13.295.845</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$107.633.280</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$52.898.622</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$52.898.622</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$6.347.835</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$42.050.788</div></div></div>
-        <div class="sr-bar"><i style="width:70%"></i></div>
-      </div>
-      <div class="step-r goal">
-        <div class="sr-head"><span class="label">Meta</span><span class="sr-x">× 5,7</span></div>
-        <div class="sr-v"><b>$500M</b><span>venta de la tienda al mes</span></div>
-        <div class="sr-grid">
-          <div><span>ROAS de mercancía</span>2,3</div>
-          <div><span>Inversión al día</span>$5.570.152</div>
-          <div><span>Pedidos al mes</span>3.428</div>
-        </div>
-        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$384.340.504</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$136.056.538</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$18.990.898</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$167.104.567</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$62.188.500</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$62.188.500</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$7.462.620</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$50.225.880</div></div></div>
-        <div class="sr-bar"><i style="width:100%"></i></div>
-      </div>
-    </div>
+    <div class="route" id="route"></div>
 
     <p class="note"><strong>La fila de Hoy no es un escenario:</strong> son los datos medidos en Orbit entre el 26 de septiembre y el 25 de octubre. Venta de la tienda $88.129.330 · venta de mercancía sin IVA $67.715.913 · inversión en pauta $21.016.604, que entre 30 días da $700.553 diarios · 602 pedidos. Los escalones sí son cálculo: salen de los pedidos que hacen falta para llegar a esa venta, por el costo y las comisiones de un pedido promedio.</p>
     <p class="label" style="margin-top:38px;"><span class="dot"></span>Noviembre · hasta dónde dé el inventario</p>
@@ -624,6 +627,70 @@ strong{font-weight:600;color:var(--ink);}
   </footer>
 </div>
 <script>
+(function(){
+  /* Mismas primitivas que el modelo de costos: nada pre-redondeado. */
+  var TICKET=112118, COBRADO=112118*1.19+12423;
+  var COSTO=TICKET*0.354, COMIS=(COBRADO*0.0249+450)+COBRADO*0.01;
+  var MARGEN=TICKET-COSTO-COMIS, FEE=4500000, COMP=0.12;
+  var HOY={etq:'Hoy',sub:'últimos 30 días',venta:'$88.129.330',w:17.6,fija:true,
+           ped:602,merc:67715913,costo:23971433,comis:3346518,pauta:21016604,fee:3800000,com:0,roas:3.22};
+  var RUTA=[
+    {etq:'Escalón 1 · Noviembre',sub:'× 2,8 en venta',venta:'$250M',v:250e6,roas:2.8,w:50,cls:''},
+    {etq:'Escalón 2',sub:'× 4 en venta',venta:'$350M',v:350e6,roas:2.5,w:70,cls:''},
+    {etq:'Meta',sub:'× 5,7 en venta',venta:'$500M',v:500e6,roas:2.3,w:100,cls:' goal'}
+  ];
+  var root=document.getElementById('route'); if(!root) return;
+  function m(n){return (n<0?'−':'')+'$'+Math.round(Math.abs(n)).toLocaleString('es-CO');}
+  function dc(n,d){return n.toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function roasTxt(n){return dc(n, Math.round(n*100)%10===0 ? 1 : 2);}
+
+  function cifras(e){
+    if(e.fija){var u=e.merc-e.costo-e.comis-e.pauta;
+      return {ped:e.ped,merc:e.merc,costo:e.costo,comis:e.comis,pauta:e.pauta,util:u,fee:e.fee,com:0,queda:u-e.fee};}
+    var ped=Math.round(e.v/COBRADO), merc=ped*TICKET, pauta=merc/e.roas, util=ped*MARGEN-pauta,
+        com=util>0?util*COMP:0;
+    return {ped:ped,merc:merc,costo:ped*COSTO,comis:ped*COMIS,pauta:pauta,util:util,
+            fee:FEE,com:com,queda:util-FEE-com};
+  }
+
+  function pintar(e,i){
+    var c=cifras(e);
+    var roas=e.fija
+      ? roasTxt(e.roas)
+      : '<div class="rs"><button class="rs-b" type="button" data-i="'+i+'" data-d="-0.1" aria-label="Bajar ROAS">−</button>'+
+        '<b class="rs-v">'+roasTxt(e.roas)+'</b>'+
+        '<button class="rs-b" type="button" data-i="'+i+'" data-d="0.1" aria-label="Subir ROAS">+</button></div>';
+    var medio=e.fija?'':'<span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>'+m(c.com)+'</div>';
+    return '<div class="step-r'+(e.cls||'')+'">'+
+      '<div class="sr-head"><span class="label">'+e.etq+'</span><span class="sr-x">'+e.sub+'</span></div>'+
+      '<div class="sr-v"><b>'+e.venta+'</b><span>venta de la tienda al mes</span></div>'+
+      '<div class="sr-grid"><div><span>ROAS de mercancía</span>'+roas+'</div>'+
+      '<div><span>Inversión al día</span>'+m(c.pauta/30)+'</div>'+
+      '<div><span>Pedidos al mes</span>'+c.ped.toLocaleString('es-CO')+'</div></div>'+
+      '<div class="sr-wrap"><div class="sr-flow">'+
+        '<div class="sr-f"><span>Venta de mercancía sin IVA</span>'+m(c.merc)+'</div><span class="sr-op">−</span>'+
+        '<div class="sr-f"><span>Costo de producto</span>'+m(c.costo)+'</div><span class="sr-op">−</span>'+
+        '<div class="sr-f"><span>Comisiones Bold + Shopify</span>'+m(c.comis)+'</div><span class="sr-op">−</span>'+
+        '<div class="sr-f"><span>Inversión en pauta</span>'+m(c.pauta)+'</div><span class="sr-op">=</span>'+
+        '<div class="sr-f"><span>Utilidad de la operación</span>'+m(c.util)+'</div></div>'+
+      '<div class="sr-flow ag">'+
+        '<div class="sr-f"><span>Utilidad de la operación</span>'+m(c.util)+'</div><span class="sr-op">−</span>'+
+        '<div class="sr-f"><span>Fee LA REAL</span>'+m(c.fee)+'</div>'+medio+'<span class="sr-op">=</span>'+
+        '<div class="sr-f res"><span>Queda para Barba Roja</span>'+m(c.queda)+'</div></div></div>'+
+      '<div class="sr-bar"><i style="width:'+e.w+'%"></i></div></div>';
+  }
+
+  function render(){
+    root.innerHTML=pintar(HOY,-1)+RUTA.map(function(e,i){return pintar(e,i);}).join('');
+  }
+  root.addEventListener('click',function(ev){
+    var b=ev.target.closest('.rs-b'); if(!b) return;
+    var e=RUTA[+b.dataset.i];
+    e.roas=Math.round(Math.min(4,Math.max(1.3,e.roas+parseFloat(b.dataset.d)))*100)/100;
+    render();
+  });
+  render();
+})();
 (function(){
     /* TICKET = mercancía sin IVA por pedido (sin envío). TOTAL = lo que ve Shopify: mercancía con IVA + envío cobrado. */
   var COSTO=39690, COMIS=5540;
