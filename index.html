@@ -322,6 +322,8 @@ strong{font-weight:600;color:var(--ink);}
 .sr-grid span{display:block;font-size:11.5px;font-weight:400;color:var(--muted);line-height:1.3;margin-bottom:3px;}
 .sr-grid em{display:block;font-style:normal;font-size:12px;font-weight:400;color:var(--ink-2);}
 /* Desglose: de la venta de mercancía a lo que queda, restando paso a paso. */
+.sr-wrap{grid-area:w;}
+.sr-wrap .sr-flow{grid-area:auto;}
 .sr-flow{grid-area:w;display:flex;flex-wrap:wrap;align-items:flex-end;gap:4px 16px;margin-top:4px;padding-top:14px;border-top:1px solid var(--line);}
 .sr-f{font-size:15.5px;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .sr-f span{display:block;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.01em;margin-bottom:2px;}
@@ -475,7 +477,7 @@ strong{font-weight:600;color:var(--ink);}
   <section>
     <p class="label">Ruta de escalado</p>
     <h2>De $88 millones a <b>$500 millones al mes.</b></h2>
-    <p>El escalón 1 es el de noviembre: los $250 millones con un ROAS de 2,8 que propuso Santiago en la llamada. De ahí en adelante el ROAS baja, porque cada peso nuevo encuentra clientes un poco más caros. Aun así, todos quedan lejos del break-even de 1,68 y cada escalón deja más plata en pesos que el anterior, aunque cada pedido deje menos. El último es el más delgado: pasar de $350 a $500 millones pide $59.471.287 más de inversión al mes y solo suma $9.289.577 de margen, así que ese salto se decide con los números del escalón 2 en la mano. Son escenarios para dimensionar, no una promesa.</p>
+    <p>El escalón 1 es el de noviembre: los $250 millones con un ROAS de 2,8 que propuso Santiago en la llamada. De ahí en adelante el ROAS baja, porque cada peso nuevo encuentra clientes un poco más caros. Aun así, todos quedan lejos del break-even de 1,68 y cada escalón deja más plata en pesos que el anterior, aunque cada pedido deje menos. El último es el más delgado: pasar de $350 a $500 millones pide $59.471.287 más de inversión al mes y solo le suma $8.175.092 a la marca, así que ese salto se decide con los números del escalón 2 en la mano. Son escenarios para dimensionar, no una promesa.</p>
     <div class="route">
       <div class="step-r">
         <div class="sr-head"><span class="label">Hoy</span><span class="sr-x">últimos 30 días</span></div>
@@ -485,7 +487,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión al día</span>$700.553</div>
           <div><span>Pedidos al mes</span>602</div>
         </div>
-        <div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$67.715.913</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$23.971.433</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$3.346.518</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$21.016.604</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda</span>$19.381.358</div></div>
+        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$67.715.913</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$23.971.433</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$3.346.518</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$21.016.604</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$19.381.358</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$19.381.358</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$3.800.000</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$15.581.358</div></div></div>
         <div class="sr-bar"><i style="width:17.6%"></i></div>
       </div>
       <div class="step-r">
@@ -496,7 +498,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión al día</span>$2.287.741</div>
           <div><span>Pedidos al mes</span>1.714</div>
         </div>
-        <div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$192.170.252</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$68.028.660</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$9.495.560</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$68.632.233</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda</span>$46.013.799</div></div>
+        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$192.170.252</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$68.028.269</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$9.495.449</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$68.632.233</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$46.014.301</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$46.014.301</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$5.521.716</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$35.992.585</div></div></div>
         <div class="sr-bar"><i style="width:50%"></i></div>
       </div>
       <div class="step-r">
@@ -507,7 +509,7 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión al día</span>$3.587.776</div>
           <div><span>Pedidos al mes</span>2.400</div>
         </div>
-        <div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$269.083.200</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$95.256.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$13.296.000</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$107.633.280</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda</span>$52.897.920</div></div>
+        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$269.083.200</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$95.255.453</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$13.295.845</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$107.633.280</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$52.898.622</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$52.898.622</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$6.347.835</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$42.050.788</div></div></div>
         <div class="sr-bar"><i style="width:70%"></i></div>
       </div>
       <div class="step-r goal">
@@ -518,18 +520,18 @@ strong{font-weight:600;color:var(--ink);}
           <div><span>Inversión al día</span>$5.570.152</div>
           <div><span>Pedidos al mes</span>3.428</div>
         </div>
-        <div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$384.340.504</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$136.057.320</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$18.991.120</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$167.104.567</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda</span>$62.187.497</div></div>
+        <div class="sr-wrap"><div class="sr-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span>$384.340.504</div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span>$136.056.538</div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span>$18.990.898</div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span>$167.104.567</div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span>$62.188.500</div></div><div class="sr-flow ag"><div class="sr-f"><span>Utilidad de la operación</span>$62.188.500</div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span>$7.462.620</div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span>$50.225.880</div></div></div>
         <div class="sr-bar"><i style="width:100%"></i></div>
       </div>
     </div>
 
     <p class="note"><strong>La fila de Hoy no es un escenario:</strong> son los datos medidos en Orbit entre el 26 de septiembre y el 25 de octubre. Venta de la tienda $88.129.330 · venta de mercancía sin IVA $67.715.913 · inversión en pauta $21.016.604, que entre 30 días da $700.553 diarios · 602 pedidos. Los escalones sí son cálculo: salen de los pedidos que hacen falta para llegar a esa venta, por el costo y las comisiones de un pedido promedio.</p>
     <p class="label" style="margin-top:38px;"><span class="dot"></span>Noviembre · hasta dónde dé el inventario</p>
-    <h3 style="margin-top:12px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Las tres opciones del mes, y lo que deja cada una.</h3>
+    <h3 style="margin-top:12px;font-size:21px;font-weight:500;letter-spacing:-.02em;">Las tres opciones del mes, y lo que le queda a Barba Roja con cada una.</h3>
     <div class="facts">
-      <div class="fact"><b>$46.013.799</b><span><strong>$250 millones</strong> · 1.714 pedidos · $2.287.741 al día de pauta. Lo que propuso Santiago en la llamada.</span></div>
-      <div class="fact"><b>$51.544.046</b><span><strong>$280 millones</strong> · 1.920 pedidos · $2.562.697 al día de pauta. $5.530.247 más que con los $250. Su propio cálculo si los $300 no dan.</span></div>
-      <div class="fact dark"><b>$55.221.928</b><span><strong>$300 millones</strong> · 2.057 pedidos · $2.745.556 al día de pauta. $9.208.129 más que con los $250. El techo, si el inventario alcanza para Black Friday.</span></div>
+      <div class="fact"><b>$35.992.585</b><span><strong>$250 millones</strong> · 1.714 pedidos · $2.287.741 al día de pauta · $10.021.716 para LA REAL entre fee y comisión. Lo que propuso Santiago en la llamada.</span></div>
+      <div class="fact"><b>$40.859.255</b><span><strong>$280 millones</strong> · 1.920 pedidos · $2.562.697 al día de pauta · $10.685.353 para LA REAL entre fee y comisión. $4.866.670 más que con los $250. Su propio cálculo si los $300 no dan.</span></div>
+      <div class="fact dark"><b>$44.095.826</b><span><strong>$300 millones</strong> · 2.057 pedidos · $2.745.556 al día de pauta · $11.126.704 para LA REAL entre fee y comisión. $8.103.242 más que con los $250. El techo, si el inventario alcanza para Black Friday.</span></div>
     </div>
     <p class="note">Las tres con el mismo ROAS de <strong>2,8</strong> y la misma estructura de campañas: lo único que cambia es el volumen. Lo que define hasta dónde se puede llegar es el inventario, no la pauta.</p>
 
@@ -546,12 +548,30 @@ strong{font-weight:600;color:var(--ink);}
         <div><span>Venta de la tienda al mes</span><b class="big js-venta">$545,4M</b><em class="js-x">× 6,2 frente a hoy</em></div>
         <div><span>Pedidos al mes</span><b class="js-ped">3.740</b><em class="js-dia">125 al día</em></div>
         <div><span>Pago por venta</span><b class="js-cpa">$46.716</b><em>máximo $66.888</em></div>
-        <div><span>Queda después de producto, comisiones y pauta</span><b class="js-queda">$75,4M</b><em class="js-qx">$56,2M más que hoy</em></div>
+        <div><span>Queda para Barba Roja</span><b class="js-queda"></b><em class="js-qx"></em></div>
       </div>
-      <div class="sr-flow sim-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span><b class="js-f-merc"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span><b class="js-f-costo"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span><b class="js-f-com"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span><b class="js-f-pauta"></b></div><span class="sr-op">=</span><div class="sr-f res"><span>Queda</span><b class="js-f-queda"></b></div></div>
+      <div class="sr-flow sim-flow"><div class="sr-f"><span>Venta de mercancía sin IVA</span><b class="js-f-merc"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Costo de producto</span><b class="js-f-costo"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Comisiones Bold + Shopify</span><b class="js-f-com"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Inversión en pauta</span><b class="js-f-pauta"></b></div><span class="sr-op">=</span><div class="sr-f"><span>Utilidad de la operación</span><b class="js-f-queda"></b></div></div><div class="sr-flow sim-flow ag"><div class="sr-f"><span>Utilidad de la operación</span><b class="js-f-util2"></b></div><span class="sr-op">−</span><div class="sr-f"><span>Fee LA REAL</span>$4.500.000</div><span class="sr-op">−</span><div class="sr-f"><span>Comisión LA REAL · 12 %</span><b class="js-f-comag"></b></div><span class="sr-op">=</span><div class="sr-f res"><span>Queda para Barba Roja</span><b class="js-f-final"></b></div></div>
       <p class="sim-msg js-msg"><i></i><span class="js-msg-t">Muy por encima del break-even de 1,68.</span></p>
     </div>
-    <p class="note"><strong>El margen de seguridad:</strong> invirtiendo $167.104.567 al mes, mientras el ROAS de mercancía no baje de <strong>1,87</strong> queda más plata que hoy. Subimos un escalón a la vez y solo pasamos al siguiente cuando el anterior se sostiene. "Queda" ya tiene descontadas las dos comisiones; es antes de impuestos y gastos fijos.</p>
+    <p class="note"><strong>El margen de seguridad:</strong> invirtiendo $167.104.567 al mes, mientras el ROAS de mercancía no baje de <strong>1,91</strong> le queda a Barba Roja más plata que hoy, ya pagándonos a nosotros. Subimos un escalón a la vez y solo pasamos al siguiente cuando el anterior se sostiene. "Queda para Barba Roja" ya tiene descontado todo lo que cobramos nosotros; es antes de impuestos y gastos fijos.</p>
+  </section>
+
+  <!-- LO QUE COBRAMOS -->
+  <section>
+    <p class="label">Lo que cobramos nosotros</p>
+    <h2>Un modelo atado <b>al crecimiento de la marca.</b></h2>
+    <p>El punto del cambio es que Barba Roja pueda escalar de verdad: más volumen, mejores márgenes y más plata al final del mes. Eso pide un equipo y un ritmo de contenido que el fee de hoy no alcanza a sostener. Por eso proponemos subir poco el fee y atar el resto a la utilidad: así podemos poner las nueve personas y los videos nuevos desde el primer día, sin que la marca tenga que asumir ese costo fijo por adelantado.</p>
+    <div class="facts">
+      <div class="fact"><b>$4.500.000</b><span>Fee mensual, de los <strong>$3.800.000</strong> que se cobran hoy. Cubre unos 30 videos nuevos al mes, a unos $150.000 cada uno.</span></div>
+      <div class="fact"><b>12 %</b><span>De la utilidad de la operación: lo que queda después del producto, las comisiones y la pauta, antes del fee.</span></div>
+      <div class="fact dark"><b>$10.021.716</b><span>Lo que nos llevaríamos en el escalón 1, entre fee y comisión. Hoy son <strong>$3.800.000</strong></span></div>
+    </div>
+    <ul class="inc">
+      <li><div>El equipo pasa de 3 a 9 personas<span>Director creativo, editores, pauta, diseño y analítica dedicados a la marca. Eso es lo que sostiene el volumen de contenido que pide escalar.</span></div></li>
+      <li><div>120 anuncios nuevos para el arranque<span>80 para atraer gente nueva, 30 para la mitad del embudo y 10 para cerrar. Hoy casi todos los anuncios son de cierre, por eso entra poca gente nueva.</span></div></li>
+      <li><div>Un dashboard en vivo<span>Inventario, pedidos y números de la operación actualizándose solos, para que la decisión de subir o parar se tome mirando datos y no al final del mes.</span></div></li>
+    </ul>
+    <p class="note"><strong>Por qué una comisión y no simplemente un fee más alto:</strong> un fee más alto se lo cobraríamos a la marca venda lo que venda. Con la comisión, lo que cobramos sube solo si la utilidad sube. Al volumen de hoy este modelo le dejaría a Barba Roja $12.555.595 en vez de $15.581.358; desde el escalón 1 le deja $35.992.585, más del doble que hoy. Está hecho para crecer, no para quedarse quieto.</p>
   </section>
 
   <!-- QUÉ SE NECESITA -->
@@ -607,8 +627,11 @@ strong{font-weight:600;color:var(--ink);}
 (function(){
     /* TICKET = mercancía sin IVA por pedido (sin envío). TOTAL = lo que ve Shopify: mercancía con IVA + envío cobrado. */
   var COSTO=39690, COMIS=5540;
-  var INV=167104567, TICKET=112118, TOTAL=145843, MARGEN=66888, BE=1.68, HOY_VENTA=88129330, HOY_QUEDA=19381358;
-  var MIN=(HOY_QUEDA+INV)/(INV*(MARGEN/TICKET));
+  var INV=167104567, TICKET=112118, TOTAL=145843, MARGEN=66888.2926, BE=1.68, HOY_VENTA=88129330;
+  /* Lo que cobramos nosotros: fee fijo + 12 % de la utilidad de la operación. */
+  var FEE=4500000, COMP=0.12, HOY_QUEDA=15581358;
+  /* ROAS desde el cual, ya pagándonos a nosotros, a la marca le queda más que hoy. */
+  var MIN=(INV+(HOY_QUEDA+FEE)/(1-COMP))/(INV*(MARGEN/TICKET));
   var root=document.getElementById('sim'); if(!root) return;
   var range=root.querySelector('.sim-range');
   function q(c){return root.querySelector(c);}
@@ -616,7 +639,8 @@ strong{font-weight:600;color:var(--ink);}
   function m(n){return (n<0?'−':'')+'$'+Math.round(Math.abs(n)).toLocaleString('es-CO');}
   function render(r){
     r=Math.round(Math.min(3.6,Math.max(1.5,r))*10)/10; range.value=r;
-    var merc=INV*r, ped=merc/TICKET, con=ped*TOTAL, queda=ped*MARGEN-INV, rt=dec(r,1);
+    var merc=INV*r, ped=merc/TICKET, con=ped*TOTAL, util=ped*MARGEN-INV, comag=util>0?util*COMP:0,
+        queda=util-FEE-comag, rt=dec(r,1);
     q('.js-roas').textContent=rt; q('.js-roas-t').textContent=rt;
     q('.js-venta').textContent=m(con);
     q('.js-x').textContent='× '+dec(con/HOY_VENTA,1)+' frente a hoy';
@@ -628,7 +652,10 @@ strong{font-weight:600;color:var(--ink);}
     q('.js-f-costo').textContent=m(ped*COSTO);
     q('.js-f-com').textContent=m(ped*COMIS);
     q('.js-f-pauta').textContent=m(INV);
-    q('.js-f-queda').textContent=m(queda);
+    q('.js-f-queda').textContent=m(util);
+    q('.js-f-util2').textContent=m(util);
+    q('.js-f-comag').textContent=m(comag);
+    q('.js-f-final').textContent=m(queda);
     var d=queda-HOY_QUEDA;
     q('.js-qx').textContent=m(Math.abs(d))+(d>=0?' más':' menos')+' que hoy';
     var msg=q('.js-msg'), t;
